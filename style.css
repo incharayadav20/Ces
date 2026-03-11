@@ -1,0 +1,159 @@
+footer{
+    background-color:#333;
+    color:white;
+    padding:10px;
+    text-align:center;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.topbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    background:url(img1.jpeg);
+    background-size:cover;
+    background-position:center;
+    font-family:'Times New Roman',serif;
+    font-size:20px;
+    padding-bottom:60px;
+}
+
+header{
+    background-color:#7dcce4;
+    color:white;
+    padding:10px;
+    text-align:center;
+    text-shadow: red 0px 0px 5px;
+    font-family: Algerian;
+}
+
+.menu{
+    background:#111;
+    text-align:center;
+    padding:10px;
+    position:sticky;
+    top:70px;
+    z-index:1000;
+}
+.menu a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-size:20px;
+    padding:5px 15px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.menu a:hover{
+    background-color:#6cf3e3;
+    color:#333;
+    border-radius:5px;
+}
+
+.table-wrapper{
+    display:flex;
+    justify-content:center;
+    padding:30px 20px;
+}
+
+.glass-container{
+    text-align:center;
+    background:linear-gradient(rgb(255,127,182),lightblue,white);
+    border-radius:15px;
+    width:700px;
+    height:1150px;
+    box-shadow:blue 0px 0px 20px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+    color:rgb(19,19,19);
+}
+
+.glass-container h2{
+    text-align:center;
+}
+
+.glass-container input[type="text"],
+.glass-container input[type="password"],
+.glass-container input[type="email"],
+.glass-container input[type="file"],
+.glass-container textarea{
+    width:70%;
+    height:25px;
+    border:none;
+    margin:auto;
+    border-radius:5px;
+    border:2px solid black;
+    background:rgba(255,255,255,0.2);
+    color:rgb(13,1,1);
+    font-size:16px;
+    margin-top:10px;
+}
+
+.glass-container input::placeholder{
+    color:rgba(16,15,15,0.7);
+}
+
+.glass-container input[type=text]:focus,
+.glass-container input[type=password]:focus,
+.glass-container input[type=email]:focus{
+    background:rgb(68,146,255);
+    text-align:center;
+    text-transform:capitalize;
+}
+
+.btn{
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:magenta 0px 0px 15px;
+}
+
+.btn-container{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:20px;
+}
+
+table{
+    width:300px;
+    border-radius:10px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:10px;
+    font-family:'Times New Roman';
+    font-size:25px;
+}
+
+tr{
+    text-align:center;
+    align-content:center;
+}
+
+h2{
+    font-family:'Lucida Calligraphy',cursive;
+    font-size:30px;
+    color:#0e0d06;
+    margin:0;
+    border-radius:20px;
+    background-color: #fcf346;
+    border: #eaea31 solid 2px;
+    padding-bottom:8px;
+}
