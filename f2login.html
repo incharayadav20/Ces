@@ -7,19 +7,16 @@
 body{
     margin:0;
     font-family:Arial;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
 }
 
 header{
-    position:sticky;
+    position:fixed;
     top:0;
     width:100%;
     height:40px;
     background:maroon;
     color:white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    box-shadow:0 2px 10px rgba(0,0,0,0.4);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -27,6 +24,32 @@ header{
     font-weight:bold;
     letter-spacing:1px;
     z-index:1000;
+}
+
+.menu{
+    background:maroon;
+    text-align:center;
+    padding:10px;
+    width:100%;
+    position:fixed;
+    top:40px;
+    z-index:999;
+}
+
+.menu a{
+    color:black;
+    margin:0 30px;
+    text-decoration:none;
+    font-size:22px;
+    padding:8px 18px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background-color:yellow;
+    color:black;
+    border-radius:5px;
 }
 
 footer{
@@ -37,19 +60,17 @@ footer{
     height:20px;
     background:maroon;
     color:white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    box-shadow:0 2px 10px rgba(0,0,0,0.4);
     display:flex;
     justify-content:center;
     align-items:center;
     font-size:22px;
-    z-index:2;
     transition:0.5s;
 }
 
 footer:hover{
     transform:translateY(-5px);
-    transition:0.3s;
-    background-color:black;
+    background:black;
 }
 
 body::before{
@@ -66,39 +87,24 @@ body::before{
     z-index:-1;
 }
 
-.menu{
-    background:maroon;
+.bg-text{
+    margin-top:120px;
     text-align:center;
-    padding:10px;
-    width:100%;
-    position:sticky;
-    top:40px;
-    z-index:999;
-}
-
-.menu a{
+    font-size:50px;
+    font-weight:bold;
     color:black;
-    margin:0 30px;
-    text-decoration:none;
-    font-size:22px;
-    padding:8px 18px;
-    letter-spacing:1px;
-    transition:0.3s;
-    display:inline-block;
-}
-
-.menu a:hover{
-    background-color:yellow;
-    color:black;
-    border-radius:5px;
+    letter-spacing:4px;
 }
 
 .login-box{
     width:480px;
     padding:40px;
     border-radius:25px;
+    margin:40px auto;
+
     background:rgba(255,255,255,0.15);
     backdrop-filter:blur(12px);
+
     border:3px solid red;
     box-shadow:0 0 20px #00d9ff,0 0 40px rgba(0,0,0,0.3);
 }
@@ -159,37 +165,24 @@ input[type="submit"]:hover{
     background-color:pink;
 }
 
-.bg-text{
-    margin-top:90px;
-    width:100%;
-    text-align:center;
-    font-size:50px;
-    font-weight:bold;
-    color:black;
-    letter-spacing:4px;
-    opacity:0.9;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<marquee behavior="scroll" direction="left" scrollamount="10">
+<marquee scrollamount="10">
 🚑 CITY EMERGENCY SERVICE PORTAL
 </marquee>
 </header>
 
-<nav>
 <div class="menu">
-<a href="#Home">Home</a>
+<a href="#">Home</a>
 <a href="newregisterform.html">Registration</a>
 <a href="t2.html">Table</a>
-<a href="#Services">Services</a>
+<a href="#">Services</a>
 <a href="f2login.html">Login</a>
 </div>
-</nav>
 
 <div class="bg-text">CITY EMERGENCY SERVICE</div>
 
@@ -208,9 +201,7 @@ input[type="submit"]:hover{
 </tr>
 
 <tr>
-<td>
-<input type="text" name="username">
-</td>
+<td><input type="text" name="username"></td>
 </tr>
 
 <tr>
@@ -218,9 +209,7 @@ input[type="submit"]:hover{
 </tr>
 
 <tr>
-<td>
-<input type="password" name="password">
-</td>
+<td><input type="password" name="password"></td>
 </tr>
 
 <tr>
@@ -236,7 +225,7 @@ input[type="submit"]:hover{
 </div>
 
 <footer>
-<marquee behavior="scroll" direction="right" scrollamount="10">
+<marquee direction="right" scrollamount="10">
 2026 City Emergency Service | All Rights Reserved
 </marquee>
 </footer>
