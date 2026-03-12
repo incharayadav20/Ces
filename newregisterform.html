@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+
+<style>
+
+/* ---------- BODY ---------- */
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===== BLURRED BACKGROUND ===== */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:url('backg.jpeg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    filter:blur(6px);
+    z-index:-2;
+}
+
+/* ---------- HEADER ---------- */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:rgba(0,0,0,0.8);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    font-weight:bold;
+    letter-spacing:2px;
+    z-index:2;
+}
+
+/* ---------- TITLE BELOW HEADER ---------- */
+.bg-title{
+    text-align:center;
+    font-size:48px;
+    color:red;
+    font-weight:bold;
+    margin-top:100px; /* pushes below header */
+    text-shadow:3px 3px 10px black;
+}
+
+/* ---------- FORM BOX ---------- */
+.form-box{
+    width:650px;
+    margin:40px auto 100px auto;
+    background-color:lightblue;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0px 0px 15px black;
+}
+
+/* ---------- TABLE ---------- */
+table{
+    width:100%;
+    border-spacing:0 12px;
+}
+
+/* ---------- TABLE TITLE ---------- */
+.table-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    padding-bottom:15px;
+}
+
+/* ---------- LABEL ---------- */
+label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:4px;
+}
+
+/* ---------- INPUTS ---------- */
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius:6px;
+    border:1px solid gray;
+    box-sizing:border-box;
+    font-size:15px;
+}
+
+/* ---------- BUTTONS ---------- */
+input[type=submit],
+input[type=reset]{
+    width:150px;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:15px;
+}
+
+input[type=submit]{
+    background-color:green;
+    color:white;
+}
+
+input[type=reset]{
+    background-color:red;
+    color:white;
+}
+
+input[type="submit"]:hover{
+    background-color:darkgreen;
+}
+
+input[type="reset"]:hover{
+    background-color:darkred;
+}
+
+.button-row{
+    text-align:center;
+    padding-top:15px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:50px;
+    background:rgba(0,0,0,0.8);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+🚑 CITY EMERGENCY SERVICE PORTAL
+</header>
+
+<!-- TITLE BELOW HEADER -->
+<div class="bg-title">
+CITY EMERGENCY SERVICE
+</div>
+
+<!-- FORM -->
+<div class="form-box">
+
+<form>
+
+<table border="0">
+
+<tr>
+<td colspan="2" class="table-title">REGISTRATION FORM</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Select Service Type:</label>
+<select>
+<option>Services</option>
+<option>Medical Help</option>
+<option>Fire Services</option>
+<option>Police Help</option>
+<option>Disaster Help</option>
+<option>Medical Emergency</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Service Id:</label>
+<input type="text" placeholder="Service Id">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Licence Number:</label>
+<input type="text" placeholder="Licence No">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Entity Name:</label>
+<input type="text" placeholder="Enter Your Name">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Contact Number:</label>
+<input type="text" placeholder="Contact No">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Address / Location:</label>
+<textarea rows="4"></textarea>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Upload Your Documents:</label>
+<input type="file">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Name:</label>
+<input type="text" placeholder="Enter Name">
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<label>Enter Password:</label>
+<input type="password" placeholder="Enter Password">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="button-row">
+<input type="submit" value="REGISTER">
+<input type="reset" value="CLEAR">
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2026 City Emergency Service | All Rights Reserved
+</footer>
+
+</body>
+</html>
