@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>City Emergency Services</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* BACKGROUND */
+
+body{
+
+min-height:100vh;
+display:flex;
+flex-direction:column;
+
+background:linear-gradient(-45deg,#1e3c72,#2a5298,#6a11cb,#2575fc);
+background: url(img.png);
+background-size: cover;
+
+animation:bgmove 12s ease infinite;
+
+}
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* HEADER */
+
+header{
+
+background:linear-gradient(90deg,#f3ff6c,#d92d0b);
+color:white;
+text-align:center;
+padding:25px;
+font-family: 'Cambria, Cochin';
+
+font-size:40px;
+font-weight:bold;
+letter-spacing:3px;
+
+text-shadow:3px 3px 10px black;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+
+animation:headGlow 3s infinite alternate;
+
+}
+
+@keyframes headGlow{
+
+from{letter-spacing:3px;}
+to{letter-spacing:6px;}
+
+}
+.topbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+/* NAVBAR */
+
+nav{
+
+background:#111;
+text-align:center;
+padding:12px;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:20px;
+font-size:18px;
+font-weight:bold;
+transition:0.4s;
+
+}
+
+nav a:hover{
+
+color:#00ffff;
+letter-spacing:2px;
+}
+
+/* MAIN AREA */
+
+main{
+
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+
+}
+
+/* FORM BOX */
+
+.form-box{
+
+width:420px;
+padding:35px;
+
+background:rgb(100, 5, 252);
+backdrop-filter:blur(5px);
+
+border-radius:18px;
+
+box-shadow:0 0 30px rgba(189, 13, 13, 0.5);
+
+text-align:center;
+
+animation:formpop 1.5s ease;
+
+}
+
+@keyframes formpop{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.form-box h2{
+
+margin-bottom:20px;
+color:white;
+letter-spacing:2px;
+}
+
+/* INPUTS */
+
+input,select{
+
+width:100%;
+padding:10px;
+margin:8px 0;
+
+border:none;
+border-radius:6px;
+
+outline:none;
+
+transition:0.3s;
+
+}
+
+input:focus,select:focus{
+
+transform:scale(1.05);
+box-shadow:0 0 20px rgb(255, 255, 255);
+
+}
+
+/* BUTTONS */
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+
+}
+
+button{
+
+width:48%;
+padding:10px;
+
+border:none;
+border-radius:25px;
+
+font-weight:bold;
+cursor:pointer;
+
+transition:0.4s;
+
+}
+
+.register{
+
+background:#00e6e6;
+color:black;
+
+}
+
+.clear{
+
+background:#ff3b3b;
+color:white;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 15px white;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#000;
+color:white;
+padding:10px;
+
+}
+
+footer marquee{
+
+font-size:16px;
+font-weight:bold;
+letter-spacing:1px;
+
+}
+
+</style>
+</head>
+
+<body>
+<div class="topbar">
+<header>
+ CITY EMERGENCY SERVICES 
+</header>
+
+<nav>
+
+<a href="home.html">Home</a>
+<a href="reg.html">Registration</a>
+<a href="#">Services</a>
+<a href="table.php">Table</a>
+<a href="login.html">Login</a>
+
+</nav>
+</div>
+<main>
+
+<div class="form-box">
+
+<h2>SERVICE REGISTRATION</h2>
+
+<form action="login.php" method="post" enctype="multipart/form-data">
+
+<select name="services">
+<option>Select Service Category</option>
+<option value="hos">Hospital</option>
+<option value="pol">Police</option>
+<option value="fire">Fire Station</option>
+<option value="amb">Ambulance</option>
+</select>
+
+<input type="text" name="sname" placeholder="Service Name">
+
+<input type="text" name="loc" placeholder="Location">
+
+<input type="text" name="scontact" placeholder="Contact Number">
+
+<input type="email" name="email" placeholder="Email">
+
+<input type="text" name="license" placeholder="License Number">
+
+<label style="color:white">Upload Image</label>
+<input type="file" name="image">
+
+<label style="color:white">Upload Document</label>
+<input type="file" name="documents">
+
+<input type="text" name="username" placeholder="Username">
+
+<input type="password" name="password" placeholder="Password">
+
+<div class="buttons">
+
+<button type="submit" class="register">REGISTER</button>
+
+<button type="reset" class="clear">CLEAR</button>
+
+</div>
+
+</form>
+
+</div>
+
+</main>
+
+
+
+<div class="marquee">
+    <footer>
+        <span class="scroll-text">
+ &copy; 2026 City Emergency Services | Ambulance | Fire | Police | Emergency Help 24/7        </span>
+    </footer>
+</div>
+
+
+</body>
+</html>

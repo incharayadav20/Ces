@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Emergency Services - Trial Sheet</title>
+                <link rel="stylesheet" href="style.css">
+
+    <style>
+        header{
+
+background:linear-gradient(90deg,#f3ff6c,#d92d0b);
+color:white;
+text-align:center;
+padding:25px;
+font-family: 'Cambria, Cochin';
+
+font-size:40px;
+font-weight:bold;
+letter-spacing:3px;
+
+text-shadow:3px 3px 10px black;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+
+animation:headGlow 3s infinite alternate;
+
+}
+
+@keyframes headGlow{
+
+from{letter-spacing:3px;}
+to{letter-spacing:6px;}
+
+}
+.topbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+/* NAVBAR */
+
+nav{
+
+background:#111;
+text-align:center;
+padding:12px;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:20px;
+font-size:18px;
+font-weight:bold;
+transition:0.4s;
+
+}
+
+nav a:hover{
+
+color:#00ffff;
+letter-spacing:2px;
+}
+
+/* MAIN AREA */
+
+main{
+
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+
+}
+
+        :root {
+            --bg-gradient: linear-gradient(135deg, #8e44ad, #d199ff);
+            --text-color: #ffffff;
+            --hover-row: rgba(255, 255, 255, 0.15);
+            --column-highlight: rgba(255, 255, 255, 0.08);
+        }
+
+
+        /* --- STYLED TABLE SECTION --- */
+        .table-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .table-container {
+            background: var(--bg-gradient);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        /* Crosshair Effect - Row */
+        tbody tr:hover {
+            background-color: var(--hover-row);
+        }
+
+        /* Crosshair Effect - Column */
+        td:hover::after, th:hover::after {
+            content: "";
+            position: absolute;
+            background-color: var(--column-highlight);
+            left: 0;
+            right: 0;
+            top: -5000px;
+            bottom: -5000px;
+            z-index: -1;
+        }
+
+        /* Active cell brightness */
+        td:hover {
+            background-color: rgba(255, 255, 255, 0.3) !important;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="topbar">
+<header>
+ CITY EMERGENCY SERVICES 
+</header>
+
+<nav>
+
+<a href="home.html">Home</a>
+<a href="reg.html">Registration</a>
+<a href="#">Services</a>
+<a href="table.html">Table</a>
+<a href="login.html">Login</a>
+
+</nav>
+</div>
+
+    <div class="table-wrapper">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>R.No</th>
+                        <th>Stream</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KIA</td>
+                        <td>20</td>
+                        <td>1901</td>
+                        <td>Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td>INCHARA</td>
+                        <td>21</td>
+                        <td>1901</td>
+                        <td>IT</td>
+                    </tr>
+                    <tr>    
+                        <td>KIANSHA</td>
+                        <td>21</td>
+                        <td>1952</td>
+                        <td>Electronics</td>      
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+
+    <footer>
+        <marquee behavior="scroll" direction="left">
+            &copy; 2026 City Emergency Services | Ambulance | Fire | Police | Emergency Help 24/7
+        </marquee>
+    </footer>
+
+</body>
+</html>
